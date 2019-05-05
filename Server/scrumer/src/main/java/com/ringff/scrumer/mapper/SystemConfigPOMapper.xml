@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ringff.scrumer.mapper.SystemConfigPOMapper">
+   <!--  <resultMap type="SystemConfigPO" id="SystemConfigPOMap">
+        <id column="ID" property="Id" />
+        <result column="Type"  property="type" typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler" />
+        <result column="NAME" property="name" />
+        <result column="VALUE" property="value" />
+        <result column="CREATE_DATE" property="createDate" /> 
+    </resultMap> -->
+    
+  <insert id="add" parameterType="SystemConfigPO">
+    INSERT INTO SYSTEM_CONFIG ([Type],NAME,VALUE,CREATE_DATE) VALUES(#{type},#{name},#{value},#{createDate})
+  </insert>
+  <select id="select" parameterType="com.ringff.scrumer.enums.EnumSystemConfigType" resultType="SystemConfigPO" >
+    SELECT ID,[Type],NAME,VALUE,CREATE_DATE FROM SYSTEM_CONFIG(NOLOCK) WHERE [Type] = #{type}
+  </select>
+  
+</mapper>
