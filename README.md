@@ -129,6 +129,8 @@ This project is easy to startup for beginner,you can just follow below step to r
 * [C# Win form Theme Library,MIT license](https://github.com/AshishKilmist/MetroFramework) 
 * [JAVA Mybatis Doc](http://www.mybatis.org/mybatis-3/)
 
+### Other resources
+
 
 
 
